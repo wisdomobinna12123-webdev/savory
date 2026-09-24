@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Savory — Experience flavors crafted with passion. Reserve your table today.">
+    
+    <link rel="icon" href="favicon.jpg" type="image/jpg">
+    <title>Savory — Flavors Crafted With Passion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="restaurant.css">
+</head>
+<body>
+
+    <!-- ===== PRELOADER ===== -->
+    <div class="preloader" id="preloader">
+        <div class="preloader__plate">
+            <div class="preloader__ring"></div>
+            <span class="preloader__emoji">🍽️</span>
+        </div>
+        <p class="preloader__text">Plating your experience…</p>
+    </div>
+
+    <!-- ===== NAVBAR ===== -->
+    <header class="navbar" id="navbar">
+        <div class="container navbar__inner">
+            <a href="#home" class="navbar__logo">
+                <span class="navbar__logo-icon">🍴</span>
+                <span class="navbar__logo-text">Savory</span>
+            </a>
+
+            <nav class="navbar__nav" id="navMenu">
+                <button class="navbar__close" id="navClose" aria-label="Close menu">✕</button>
+                
+                <ul class="navbar__list">
+                    <li><a href="#home" class="navbar__link active">Home</a></li>
+                    <li><a href="#dishes" class="navbar__link">Menu</a></li>
+                    <li><a href="#about" class="navbar__link">About</a></li>
+                    <li><a href="#gallery" class="navbar__link">Gallery</a></li>
+                    <li><a href="#contact" class="navbar__link">Contact</a></li>
+                </ul>
+                <a href="#reservation" class="btn btn--primary navbar__cta">Reserve a Table</a>
+            </nav>
+
+            <button class="navbar__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home">
+        <div class="hero__overlay"></div>
+        <div class="container hero__content">
+            <span class="hero__badge">✦ Est. 1998 · Farm to Table ✦</span>
+            <h1 class="hero__title">
+                Experience Flavors<br>
+                <span class="hero__title-accent">Crafted With Passion</span>
+            </h1>
+            <p class="hero__text">
+                From fresh ingredients to expertly prepared dishes, every meal is designed
+                to create memorable dining experiences for you and your loved ones.
+            </p>
+            <div class="hero__buttons">
+                <a href="#dishes" class="btn btn--primary">View Menu</a>
+                <a href="#reservation" class="btn btn--ghost">Reserve a Table</a>
+            </div>
+            <div class="hero__stats">
+                <div class="hero__stat">
+                    <strong data-count="25">0</strong><span>Years</span>
+                </div>
+                <div class="hero__stat">
+                    <strong data-count="120">0</strong><span>Dishes</span>
+                </div>
+                <div class="hero__stat">
+                    <strong data-count="800">0</strong><span>Guests</span>
+                </div>
+            </div>
+        </div>
+        
+            <span></span>
+        </a>
+    </section>
+
+    <!-- ===== FEATURED DISHES ===== -->
+    <section class="section dishes" id="dishes">
+        <div class="container">
+            <div class="section__header reveal">
+                <span class="section__eyebrow">Our Menu</span>
+                <h2 class="section__title">Customer Favorites</h2>
+                <p class="section__subtitle">
+                    Discover some of our most loved dishes, carefully prepared by our chefs
+                    using premium ingredients and authentic recipes.
+                </p>
+            </div>
+
+            <!-- Filter tabs -->
+            <div class="dishes__filters reveal" id="dishFilters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="mains">Mains</button>
+                <button class="filter-btn" data-filter="pasta">Pasta</button>
+                <button class="filter-btn" data-filter="pizza">Pizza</button>
+                <button class="filter-btn" data-filter="desserts">Desserts</button>
+            </div>
+
+            <div class="dishes__grid" id="dishesGrid">
+                <!-- Injected by JS -->
+            </div>
+
+            <div class="dishes__more reveal">
+                <button class="btn btn--outline" id="loadMoreBtn">Load More Dishes</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="section about" id="about">
+        <div class="container about__grid">
+            <div class="about__visual reveal">
+                <div class="about__image">
+                    <span>👨‍🍳</span>
+                </div>
+                <div class="about__floating-card">
+                    <strong>Award Winning</strong>
+                    <span>Best Fine Dining 2024</span>
+                </div>
+            </div>
+            <div class="about__content reveal">
+                <span class="section__eyebrow">Our Story</span>
+                <h2 class="section__title section__title--left">
+                    A Tradition of Great Food &amp; Warm Hospitality
+                </h2>
+                <p>
+                    Founded with a passion for exceptional dining, our restaurant combines
+                    fresh ingredients, skilled craftsmanship, and a welcoming atmosphere.
+                    Whether you're joining us for a family dinner, a casual lunch, or a
+                    special celebration, we strive to make every visit unforgettable.
+                </p>
+
+                <h3 class="about__subheading">Why Choose Us</h3>
+                <ul class="about__list">
+                    <li>
+                        <span class="about__icon">🌿</span>
+                        <div>
+                            <strong>Fresh Ingredients</strong>
+                            <p>Sourced daily to ensure every dish is fresh and flavorful.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="about__icon">👨‍🍳</span>
+                        <div>
+                            <strong>Expert Chefs</strong>
+                            <p>Our culinary team brings creativity and experience to every plate.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="about__icon">🕯️</span>
+                        <div>
+                            <strong>Comfortable Atmosphere</strong>
+                            <p>A relaxing environment perfect for family, dates, and celebrations.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="about__icon">⭐</span>
+                        <div>
+                            <strong>Exceptional Service</strong>
+                            <p>Dedicated staff providing a seamless, enjoyable dining experience.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="section testimonials">
+        <div class="container">
+            <div class="section__header reveal">
+                <span class="section__eyebrow">Testimonials</span>
+                <h2 class="section__title">What Our Guests Say</h2>
+            </div>
+        </div>
+        <div class="testimonials__slider reveal">
+            <div class="testimonials__track" id="testimonialTrack">
+                <!-- Injected by JS -->
+            </div>
+            <div class="testimonials__dots" id="testimonialDots"></div>
+        </div>
+    </section>
+
+    <!-- ===== GALLERY ===== -->
+    <section class="section gallery" id="gallery">
+        <div class="container">
+            <div class="section__header reveal">
+                <span class="section__eyebrow">Gallery</span>
+                <h2 class="section__title">Moments Worth Sharing</h2>
+                <p class="section__subtitle">
+                    A glimpse into our kitchen creations, cozy interiors, and memorable guest experiences.
+                </p>
+            </div>
+            <div class="gallery__grid reveal" id="galleryGrid">
+                <!-- Injected by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== RESERVATION ===== -->
+    <section class="section reservation" id="reservation">
+        <div class="container reservation__grid">
+            <div class="reservation__info reveal">
+                <span class="section__eyebrow section__eyebrow--light">Book Now</span>
+                <h2 class="section__title section__title--left section__title--light">
+                    Reserve Your Table
+                </h2>
+                <p class="reservation__text">
+                    Planning a visit? Secure your table today and enjoy an unforgettable
+                    dining experience with family and friends.
+                </p>
+                <ul class="reservation__perks">
+                    <li>✓ Free cancellation up to 2 hours before</li>
+                    <li>✓ Instant confirmation</li>
+                    <li>✓ Special requests welcomed</li>
+                </ul>
+            </div>
+
+            <form class="reservation__form reveal" id="reservationForm" novalidate>
+                <div class="form-group">
+                    <label for="resName">Full Name</label>
+                    <input type="text" id="resName" name="name" placeholder="Jane Doe" required>
+                    <small class="error-msg"></small>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="resEmail">Email</label>
+                        <input type="email" id="resEmail" name="email" placeholder="jane@email.com" required>
+                        <small class="error-msg"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="resPhone">Phone</label>
+                        <input type="tel" id="resPhone" name="phone" placeholder="+234 800 000 0000" required>
+                        <small class="error-msg"></small>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="resDate">Date</label>
+                        <input type="date" id="resDate" name="date" required>
+                        <small class="error-msg"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="resTime">Time</label>
+                        <input type="time" id="resTime" name="time" required>
+                        <small class="error-msg"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="resGuests">Guests</label>
+                        <select id="resGuests" name="guests" required>
+                            <option value="">Select</option>
+                            <option value="1">1 Guest</option>
+                            <option value="2">2 Guests</option>
+                            <option value="3">3 Guests</option>
+                            <option value="4">4 Guests</option>
+                            <option value="5">5 Guests</option>
+                            <option value="6">6+ Guests</option>
+                        </select>
+                        <small class="error-msg"></small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="resNotes">Special Requests <span class="optional">(optional)</span></label>
+                    <textarea id="resNotes" name="notes" rows="3" placeholder="Allergies, celebrations, seating preference…"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn--primary btn--full">Confirm Reservation</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section__header reveal">
+                <span class="section__eyebrow">Visit Us</span>
+                <h2 class="section__title">Find Your Way to Flavor</h2>
+                <p class="section__subtitle">
+                    We'd love to welcome you. Stop by for great food, exceptional service,
+                    and a dining experience you'll remember.
+                </p>
+            </div>
+            <div class="contact__grid reveal">
+                <div class="contact__card">
+                    <span class="contact__icon">📍</span>
+                    <h3>Address</h3>
+                    <p>123 Culinary Street<br>City Center</p>
+                </div>
+                <div class="contact__card">
+                    <span class="contact__icon">📞</span>
+                    <h3>Phone</h3>
+                    <p><a href="tel:+2348000000000">+234 800 000 0000</a></p>
+                </div>
+                <div class="contact__card">
+                    <span class="contact__icon">✉️</span>
+                    <h3>Email</h3>
+                    <p><a href="mailto:hello@savory.com">hello@savory.com</a></p>
+                </div>
+                <div class="contact__card">
+                    <span class="contact__icon">🕐</span>
+                    <h3>Hours</h3>
+                    <p>Mon – Sun<br>9:00 AM – 10:00 PM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div class="footer__brand">
+                <a href="#home" class="navbar__logo navbar__logo--light">
+                    <span class="navbar__logo-icon">🍴</span>
+                    <span class="navbar__logo-text">Savory</span>
+                </a>
+                <p>Serving unforgettable meals, one plate at a time.</p>
+            </div>
+
+            <div class="footer__col">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="#dishes">Menu</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#reservation">Reservations</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__col">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="tel:+2348000000000">+234 800 000 0000</a></li>
+                    <li><a href="mailto:hello@savory.com">hello@savory.com</a></li>
+                    <li>123 Culinary Street</li>
+                </ul>
+            </div>
+
+            <div class="footer__col">
+                <h4>Follow</h4>
+                <div class="footer__socials">
+                    <a href="#" aria-label="Instagram">📷</a>
+                    <a href="#" aria-label="Facebook">👍</a>
+                    <a href="#" aria-label="Twitter">🐦</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>© <span id="year"></span> Savory Restaurant. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ===== TOAST NOTIFICATION ===== -->
+    <div class="toast" id="toast" role="status" aria-live="polite">
+        <span class="toast__icon">✓</span>
+        <span class="toast__message"></span>
+    </div>
+
+    <!-- ===== LIGHTBOX ===== -->
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+        <button class="lightbox__close" id="lightboxClose" aria-label="Close">✕</button>
+        <div class="lightbox__content" id="lightboxContent"></div>
+    </div>
+
+    <!-- ===== BACK TO TOP ===== -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+    <script src="restaurant.js"></script>
+</body>
+</html>
